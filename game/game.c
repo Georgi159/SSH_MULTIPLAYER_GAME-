@@ -24,8 +24,12 @@ time_t time2, time1;
 
 int main()
 {	
+	system("clear");
+
+printf("\n");
 system("tput civis"); 
- 
+ printf("%s", ACB_RESET);
+  printf("%s", ACC_RESET);
 	
 	initial('*');
 
@@ -37,12 +41,14 @@ system("tput civis");
 	// time_t a=time2-time1;
 	while(1)
 	{
+		feldS[3][3]=7;
 		
+
 		update();
 		sleep(0.35);
 		
 
-		move(comand());
+		//move(comand());
 
 
 		tiks++;
@@ -113,7 +119,7 @@ int update()
 		{	
 
 
-			switch(feldS[i][l])
+			switch(feldB[i][l])
 			{
 				case 1:  strcpy(sul_cus1, ACC_BLACK);break;
 				case 2:  strcpy(sul_cus1, ACC_RED);break;
@@ -126,7 +132,7 @@ int update()
 				
 			}
 
-			switch(feldB[i][l])
+			switch(feldS[i][l])
 			{
 				case 1:  strcpy(sul_cus2, ACB_BLACK );break;
 				case 2:  strcpy(sul_cus2, ACB_RED );break;
@@ -163,8 +169,8 @@ int initial(char a)
 		for (int l = 0; l < FLEN; ++l)
 		{
 			feld[i][l]=a;
-			feldB[i][l]=2;
-			feldS[i][l]=0;
+			feldB[i][l]=7;
+			feldS[i][l]=1;
 		}
 	}
 	return 0;
