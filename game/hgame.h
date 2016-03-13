@@ -2,6 +2,16 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+typedef struct 
+{
+	unsigned int x, y;
+	char name[20];
+	int comand, last_comand;
+	int colur_s, colur_b;
+
+
+}player;
+
 
 
 int kbhit(void)
