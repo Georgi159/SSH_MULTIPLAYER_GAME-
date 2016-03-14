@@ -1,50 +1,66 @@
-#define ACC_BLACK		"\033[00;30m"
-#define ACC_RED			"\033[00;31m"
-#define ACC_GREEN		"\033[00;32m"
-#define ACC_BROWN		"\033[00;33m"
-#define ACC_BLUE		"\033[00;34m"
-#define ACC_MAGENTA		"\033[00;35m"
-#define ACC_CYAN		"\033[00;36m"
-#define ACC_WHITE		"\033[00;37m"
-#define ACC_LIGHTGRAY	"\033[00;38m"
-#define ACC_DEFALT		"\033[00;38m"
-#define ACC_RESET		"\033[00;00m"
-
-#define ACC_BLACK_BOLD		"\033[01;30m"
-#define ACC_RED_BOLD		"\033[01;31m"
-#define ACC_GREEN_BOLD		"\033[01;32m"
-#define ACC_BROWN_BOLD		"\033[01;33m"
-#define ACC_BLUE_BOLD		"\033[01;34m"
-#define ACC_MAGENTA_BOLD	"\033[01;35m"
-#define ACC_CYAN_BOLD		"\033[01;36m"
-#define ACC_WHITE_BOLD		"\033[01;37m"
-#define ACC_LIGHTGRAY_BOLD	"\033[01;38m"
 
 
 
-#define ACB_BLACK		"\033[00;40m"
-#define ACB_RED			"\033[00;41m"
-#define ACB_GREEN		"\033[00;42m"
-#define ACB_BROWN		"\033[00;43m"
-#define ACB_BLUE		"\033[00;44m"
-#define ACB_MAGENTA		"\033[00;45m"
-#define ACB_CYAN		"\033[00;46m"
-#define ACB_WHITE		"\033[00;47m"
-#define ACB_LIGHTGRAY	"\033[00;48m"
-#define ACB_DEFALT		"\033[00;49m"
-#define ACB_RESET		"\033[00m"
 
-#define ACC_BLACK_UNDERLINE			"\033[04;30m"
-#define ACC_RED_UNDERLINE			"\033[04;31m"
-#define ACC_GREEN_UNDERLINE			"\033[04;32m"
-#define ACC_BROWN_UNDERLINE			"\033[04;33m"
-#define ACC_BLUE_UNDERLINE			"\033[04;34m"
-#define ACC_MAGENTA_UNDERLINE		"\033[04;35m"
-#define ACC_CYAN_UNDERLINE			"\033[04;36m"
-#define ACC_WHITE_UNDERLINE			"\033[04;37m"
-#define ACC_LIGHTGRAY_UNDERLINE		"\033[04;38m"
-#define ACC_DEFALT_UNDERLINE		"\033[04;39m"
-#define ACC_RESET_UNDERLINE			"\033[04;00m"
+#define CUSTOM_C_S "\033[38;5;"
+#define CUSTOM_C_B "\033[48;5;" 
+
+
+
+
+
+
+
+
+
+#define ACC_BLACK		"\033[0;30m"
+#define ACC_RED			"\033[0;31m"
+#define ACC_GREEN		"\033[0;32m"
+#define ACC_BROWN		"\033[0;33m"
+#define ACC_BLUE		"\033[0;34m"
+#define ACC_MAGENTA		"\033[0;35m"
+#define ACC_CYAN		"\033[0;36m"
+#define ACC_WHITE		"\033[0;37m"
+#define ACC_LIGHTGRAY	"\033[0;38m"
+#define ACC_DEFALT		"\033[0;38m"
+#define ACC_RESET		"\033[0;0m"
+
+#define ACC_BLACK_BOLD		"\033[1;30m"
+#define ACC_RED_BOLD		"\033[1;31m"
+#define ACC_GREEN_BOLD		"\033[1;32m"
+#define ACC_BROWN_BOLD		"\033[1;33m"
+#define ACC_BLUE_BOLD		"\033[1;34m"
+#define ACC_MAGENTA_BOLD	"\033[1;35m"
+#define ACC_CYAN_BOLD		"\033[1;36m"
+#define ACC_WHITE_BOLD		"\033[1;37m"
+#define ACC_LIGHTGRAY_BOLD	"\033[1;38m"
+
+
+
+
+#define ACB_BLACK		"\033[7;40m"
+#define ACB_RED			"\033[7;41m"
+#define ACB_GREEN		"\033[7;42m"
+#define ACB_BROWN		"\033[7;43m"
+#define ACB_BLUE		"\033[7;44m"
+#define ACB_MAGENTA		"\033[7;45m"
+#define ACB_CYAN		"\033[7;46m"
+#define ACB_WHITE		"\033[7;47m"
+#define ACB_LIGHTGRAY	"\033[7;48m"
+#define ACB_DEFALT		"\033[7;49m"
+#define ACB_RESET		"\033[0m"
+
+#define ACC_BLACK_UNDERLINE			"\033[4;30m"
+#define ACC_RED_UNDERLINE			"\033[4;31m"
+#define ACC_GREEN_UNDERLINE			"\033[4;32m"
+#define ACC_BROWN_UNDERLINE			"\033[4;33m"
+#define ACC_BLUE_UNDERLINE			"\033[4;34m"
+#define ACC_MAGENTA_UNDERLINE		"\033[4;35m"
+#define ACC_CYAN_UNDERLINE			"\033[4;36m"
+#define ACC_WHITE_UNDERLINE			"\033[4;37m"
+#define ACC_LIGHTGRAY_UNDERLINE		"\033[4;38m"
+#define ACC_DEFALT_UNDERLINE		"\033[4;39m"
+#define ACC_RESET_UNDERLINE			"\033[4;0m"
 
 #define M_UP "\033[A"
 #define M_DOWN "\033[B"
@@ -77,3 +93,32 @@ CYAN - 35 CYAN
 cyan - 36
 lightgray - 37
 */
+
+/*switch(feldS[i][l])
+{
+	case 1:  strcpy(sul_cus1, ACC_BLACK);break;
+	case 2:  strcpy(sul_cus1, ACC_RED);break;
+	case 3:  strcpy(sul_cus1, ACC_GREEN);break;
+	case 4:  strcpy(sul_cus1, ACC_BROWN);break;
+	case 5:  strcpy(sul_cus1, ACC_BLUE);break;
+	case 6:  strcpy(sul_cus1, ACC_MAGENTA);break;
+	case 7:  strcpy(sul_cus1, ACC_CYAN);break;
+	case 8:  strcpy(sul_cus1, ACC_WHITE); break;
+	default : puts("kyyrrrrrr");
+
+	
+}
+
+switch(feldB[i][l])
+{
+	case 1:  strcpy(sul_cus2, ACB_BLACK );break;
+	case 2:  strcpy(sul_cus2, ACB_RED );break;
+	case 3:  strcpy(sul_cus2, ACB_GREEN) ;break;
+	case 4:  strcpy(sul_cus2, ACB_BROWN );break;
+	case 5:  strcpy(sul_cus2, ACB_BLUE );break;
+	case 6:  strcpy(sul_cus2, ACB_MAGENTA );break;
+	case 7:  strcpy(sul_cus2, ACB_CYAN );break;
+	case 8:  strcpy(sul_cus2, ACB_WHITE );break;
+	default : puts("kyyrrrrrr");
+	
+}*/
