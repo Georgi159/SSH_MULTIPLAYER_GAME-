@@ -1,78 +1,43 @@
-#include <stdio.h>
-#include <string.h>
-#include "colurs.h"
-#include "hgame.h" 
-#include <stdlib.h>
-#include <time.h>
-#define FWIT 45
-#define FLEN 171
-#define FIELD_S ')'
-#define FIELD_B 4
-#define FIELD_C_S 10
-
-int update();
-int initialize_feld(char a,int b ,int c);
-int comand();
-int move(int com);
-// int set_player(player pl);
-int initialize_player(player pl);
+#include "h1game.h"
 
 unsigned long long tiks=59;
 char feld[FWIT][FLEN];
 char feldB[FWIT][FLEN];
 char feldS[FWIT][FLEN];
+	time_t a=0,b=0;
 
-
-void print_colurs()
-{
-	puts("");
-	for (int i = 0; i < 255; ++i)
-	{
-		char a[40]={0};
-		sprintf(a , "%s%d%c" , "\033[48;5;" , i , 'm');
-		printf("%s%3d ",a,i );
-		if (i%16==0)
-		{
-			printf("%s\n","\033[33m");			
-		}
-	}
-	puts("");
-}
 
 int main()
 {	
 
-//	 print_colurs();
-
+	a=time(0);
 	system("clear");
-	//initialize_feld
 	printf("\n");
 	system("tput civis"); 
- 	//printf("%s", ACB_RESET);
- //	printf("%s", ACC_RESET);
 	
 	initialize_feld(FIELD_S, FIELD_B , FIELD_C_S);
 
-	// time1=time(NULL);
-	// time2=time(NULL);
-
 	player players[2];
 	memset(players, 0 ,sizeof(player));
-	initialize_player(players[0]);
+	initialize_player(&players[0]);
 
+	update();
 
 	while(1)
 	{
-		update();
 
 		sleep(0.35);
-		//printf("%s%s ssssss\n",ACC_RED, ACB_GREEN );
 		
-		move(comand());
+		move_player(comand(),&players[0]);
+		update();
+		
+
+		printf("%d %d    ", players[0].x,players[0].y );
 		tiks++;
 	}
 
-	
+	a=time(0);
+	printf("%llu\n",tiks/(b-a) );
 	return 0;
 }
 
@@ -84,28 +49,28 @@ int main()
 				printf("%d", feldS[i][l]);
 			}
 			printf("\n");
-		}
+		}	system("clear");
 */
 
 
-int initialize_player(player pl)
+int initialize_player(player *pl)
 {	
 	// left a rigth d up 1 down 2
 	//printf("%s ", "Input player name:");
-	//scanf("%s", pl.name);
+	//scanf("%s", (*pl).name);
 	//printf("%s ", "Input colur name:");
-	//scanf("%1d", &pl.colur_s);
-	 pl.colur_s=FIELD_B;
-	 pl.colur_b=16;
+	//scanf("%1d", &(*pl).colur_s);
+	 (*pl).colur_s=3;
+	 (*pl).colur_b=4;
 	do
 	{
-		pl.x=rand()%FWIT;
-		pl.y=rand()%FLEN;
-	}while(feld[pl.x][pl.y]!= FIELD_S);
+		(*pl).x=rand()%FWIT;
+		(*pl).y=rand()%FLEN;
+	}while(feld[(*pl).x][(*pl).y]!= FIELD_S);
 
-	feld[pl.x][pl.y]='0';
-	feldS[pl.x][pl.y]=pl.colur_s;
-	feldB[pl.x][pl.y]= pl.colur_b+1;
+	feld [(*pl).x][(*pl).y]='0';
+	feldS[(*pl).x][(*pl).y]=(*pl).colur_s;
+	feldB[(*pl).x][(*pl).y]= (*pl).colur_b;
 
 	return 0;
 
@@ -113,28 +78,35 @@ int initialize_player(player pl)
 
 
 
-void game_exit()
-{
-	for (int i = 0; i < FWIT; ++i)
-	{
-		printf("%s", M_DOWN);
-	}
-	printf("%s", ACB_RESET );
-	printf("%llu\n",tiks );
-	system("tput cnorm"); 
-	exit(0);
-}
+
 
 int move(int com)
 {
 	if (com==0) return 0;
 
-	switch (com)
-	{
-		//case 2:  feld[x++][y]='#';feldB[x++][y]='5';feldS[x++][y]='5';
-	}
-
+	
 	return 0;
+}
+int move_player(int com, player *a)
+{
+	(*a).last_comand=(*a).comand;
+	(*a).comand=com;
+
+	//feld [(*a).x][(*a).y]=FIELD_S;
+	//feldS[(*a).x][(*a).y]=FIELD_C_S;
+	//feldB[(*a).x][(*a).y]=FIELD_B;
+
+
+	switch (com)
+	{// left 3 rigth 4 up 1 down 2
+			case 1: (*a).y++; feldS[(*a).x][(*a).y]=(*a).colur_s; feldS[(*a).x][(*a).y]=(*a).colur_b; return 1; break;
+			case 2: (*a).y--; feldS[(*a).x][(*a).y]=(*a).colur_s; feldS[(*a).x][(*a).y]=(*a).colur_b; return 1; break;
+			case 3: (*a).x++; feldS[(*a).x][(*a).y]=(*a).colur_s; feldS[(*a).x][(*a).y]=(*a).colur_b; return 1; break;
+			case 4: (*a).x--; feldS[(*a).x][(*a).y]=(*a).colur_s; feldS[(*a).x][(*a).y]=(*a).colur_b; return 1; break;
+	}
+	return 0;
+	//update();
+	
 }
 
 int comand()
@@ -145,12 +117,12 @@ int comand()
 		char a=getch();
 
 		switch(a)
-		{// left a rigth d up 1 down 2
-			case 'w': red=1 ;
-			case 's': red=2 ;
-			case 'a': red=3 ;
-			case 'd': red=4 ;
-			case 'q': game_exit() ;
+		{// left 3 rigth 4 up 1 down 2
+			case 'w': red=1 ; break;
+			case 's': red=2 ; break;
+			case 'd': red=3 ; break;
+			case 'a': red=4 ; break;
+			case 'q': game_exit() ; break;
 
 		}
 	}
@@ -179,7 +151,7 @@ int update()
 	{
 		for (int l = 0; l < FLEN; ++l)
 		{	
-			printf("%s", ACB_RESET );
+			printf("\033[7;0m\033[0m");
 
 
 			
@@ -192,18 +164,17 @@ int update()
 
 			printf("%s%c",sul_cus1, feld[i][l]);
 
-			printf("%s", ACC_RESET );
-
+			printf("\033[7;0m\033[0m");
 			sleep(0.1);
 			
 			//printf("%d %d\n", feldS[i][l],feldB[i][l]);
 			//pause();
 			
 		}
-	printf("\n");
+	printf("\033[0m    ");   printf("\n");
 	}
 
-	printf("%s", ACC_RESET );
+	printf("\033[7;0m\033[0m");
 
 
 
@@ -224,4 +195,46 @@ int initialize_feld(char a,int b ,int c)
 	}
 	return 0;
 
+}
+int line_len()
+{
+
+	FILE *fp = popen("tput cols", "r");
+	int num_s_for_line;
+	fscanf(fp, "%d", &num_s_for_line);
+	printf("%d\n",num_s_for_line );
+	pclose(fp);
+
+	return num_s_for_line;
+}
+
+
+void print_colurs()
+{
+	puts("");
+	for (int i = 0; i < 255; ++i)
+	{
+		char a[40]={0};
+		sprintf(a , "%s%d%c" , "\033[48;5;" , i , 'm');
+		printf("%s%3d ",a,i );
+		if (i%16==0)
+		{
+			printf("%s\n","\033[33m");			
+		}
+	}
+	puts("");
+}
+
+void game_exit()
+{
+	update();
+	for (int i = 0; i < FWIT; ++i)
+	{
+		printf("%s", M_DOWN);
+	}
+	printf("%s", ACB_RESET );
+	printf("%llu\n",tiks );
+
+	system("tput cnorm"); 
+	exit(0);
 }
