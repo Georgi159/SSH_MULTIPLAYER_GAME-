@@ -26,7 +26,7 @@ int main()
 	while(1)
 	{
 
-		sleep(0.4);
+		
 		
 		move_player(comand(),&players[0]);
 
@@ -36,11 +36,13 @@ int main()
 		if(tiks%60==0)spawn_food();
 		update();
 
-		sleep(0.5);
+
 
 		printf("%d %d    ", players[0].x,players[0].y );
 		printf("%llu\n",tiks );
 		tiks++;
+		system("sleep 0.009760");
+
 	}
 
 	

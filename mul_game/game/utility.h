@@ -16,6 +16,7 @@ void print_colurs()
 	}
 	puts("");
 }
+
 void game_exit()
 {
 	update();
@@ -30,7 +31,6 @@ void game_exit()
 	exit(0);
 }
 
-
 int line_len()
 {
 
@@ -43,12 +43,10 @@ int line_len()
 	return num_s_for_line;
 }
 
-
 void print_ch(char ch,int col_s,int col_b)
-{
-	printf("%s%dm%s%dm%c",CUSTOM_C_S,col_s, CUSTOM_C_B,col_b,ch);
-
-}
+	{
+		printf("%s%dm%s%dm%c",CUSTOM_C_S,col_s, CUSTOM_C_B,col_b,ch);
+	}
 
 
 void clear()
