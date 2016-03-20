@@ -23,9 +23,16 @@ int initialize_player(player *pl)
 
 int move_player(int com, player *a)
 {
+
+	if(com==0)
+	{
+		com=(*a).comand;
+
+		if(tiks%SPEED_MULTIPLIER!=0) return 3;
+	}
+
 	(*a).last_comand=(*a).comand;
 	(*a).comand=com;
-
 
 	switch (com)
 	{
@@ -113,4 +120,19 @@ int update()
 
 
 	return 0;
+}
+
+int initialize_feld(char a,int b ,int c)
+{
+	for (int i = 0; i < FWIT; ++i)
+	{
+		for (int l = 0; l < FLEN; ++l)
+		{
+			feld[i][l]=a;
+			feldB[i][l]=b;
+			feldS[i][l]=c;
+		}
+	}
+	return 0;
+
 }

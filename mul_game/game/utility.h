@@ -20,12 +20,13 @@ void print_colurs()
 void game_exit()
 {
 	update();
-	for (int i = 0; i < FWIT; ++i)
+	for (int i = 0; i < 10; ++i)
 	{
 		printf("%s", M_DOWN);
 	}
 	printf("%s", ACB_RESET );
-	printf("%llu\n",tiks );
+	b=time(0);
+	printf("%llu\n%lf\n",tiks, (double)tiks/(double)(b-a) );
 
 	system("tput cnorm"); 
 	exit(0);

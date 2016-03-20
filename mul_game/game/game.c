@@ -7,26 +7,22 @@
 
 int main()
 {	
+	//intalize
+		a=time(0);
+		system("tput civis"); 
+		clear();
+		initialize_feld(FIELD_S,FIELD_C_S,FIELD_B);
+		memset(players, 0 ,sizeof(player));
+		for (int i = 0; i < num_of_players; ++i)
+		{
+			initialize_player(&players[i]);
+		}
+		update();
+	//intalize
 
-	clear();
-	printf("\n");
-	system("tput civis"); 
-	
-	initialize_feld(FIELD_S, FIELD_B , FIELD_C_S);
-
-	memset(players, 0 ,sizeof(player));
-
-	for (int i = 0; i < num_of_players; ++i)
-	{
-		initialize_player(&players[i]);
-	}
-	
-
-	update();
+	// main loop
 	while(1)
 	{
-
-		
 		
 		move_player(comand(),&players[0]);
 
@@ -36,10 +32,9 @@ int main()
 		if(tiks%60==0)spawn_food();
 		update();
 
-
-
 		printf("%d %d    ", players[0].x,players[0].y );
-		printf("%llu\n",tiks );
+		b=time(0);
+		printf("%llu\n%lf FPS\n",tiks, (double)tiks/(double)(b-a) );
 		tiks++;
 		system("sleep 0.009760");
 
@@ -73,20 +68,6 @@ int spawn_food()
 }
 
 
-int initialize_feld(char a,int b ,int c)
-{
-	for (int i = 0; i < FWIT; ++i)
-	{
-		for (int l = 0; l < FLEN; ++l)
-		{
-			feld[i][l]=a;
-			feldB[i][l]=b;
-			feldS[i][l]=c;
-		}
-	}
-	return 0;
-
-}
 
 int eat_food()
 {
@@ -96,6 +77,9 @@ int eat_food()
 		{
 			players[i].points++;
 			feld[players[i].y][players[i].x]=FIELD_S;
+			feldS[players[i].y][players[i].x]=FIELD_C_S;
+			feldB[players[i].y][players[i].x]=FIELD_B;
+
 			  num_of_food--;
 		}
 	}

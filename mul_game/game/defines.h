@@ -7,14 +7,17 @@
 	#include <unistd.h>
 	#include <fcntl.h>
 	#include "colurs.h"
+//incl
 
 //defs
 	#define FWIT 30
-	#define FLEN 30
+	#define FLEN 50
 	#define FIELD_S ' '
 	#define FIELD_B 4
 	#define FIELD_C_S 3
 	#define FOOD '?'
+	#define SPEED_MULTIPLIER 5
+//defs
 
 //def STR
 	typedef struct 
@@ -28,6 +31,7 @@
 	  int points;
 
 	}player;
+//def STR
 
 //def VAR
 	int num_of_players=2;
@@ -38,6 +42,7 @@
 	int feldB[FWIT][FLEN];
 	int feldS[FWIT][FLEN];
 	time_t a=0,b=0 ;
+//def VAR
 
 
 // def fun
@@ -59,3 +64,4 @@
 	void print_ch(char ch,int col_s,int col_b);
 	void clear();
 
+// def fun
