@@ -8,7 +8,9 @@ typedef struct
 	char name[20];
 	int comand, last_comand;
 	int colur_s, colur_b;
+	char player_sim;
 
+  int points;
 
 }player;
 
@@ -53,3 +55,5 @@ int getch(void)
     tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
     return ch;
 }
+
+

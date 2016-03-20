@@ -1,0 +1,744 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"feldS",
+				"feldS"
+			],
+			[
+				"pl",
+				"player"
+			],
+			[
+				"pri",
+				"printf	printf …"
+			],
+			[
+				"co",
+				"colur_b"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"pr",
+				"printf	printf …"
+			],
+			[
+				"col",
+				"col_s"
+			],
+			[
+				"fl",
+				"FLEN"
+			],
+			[
+				"U",
+				"update"
+			],
+			[
+				"p",
+				"printf	printf …"
+			],
+			[
+				"a",
+				"arr"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"d",
+				"M_DOWN"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"c",
+				"comand"
+			],
+			[
+				"com",
+				"comand"
+			],
+			[
+				"FI",
+				"FIELD_B"
+			],
+			[
+				"F",
+				"FIELD_C_S"
+			],
+			[
+				"colur_",
+				"colur_b"
+			],
+			[
+				"cu",
+				"sul_cus1"
+			],
+			[
+				"fe",
+				"feldS"
+			],
+			[
+				"sul",
+				"sul_cus1"
+			],
+			[
+				"ACB",
+				"ACB_GREEN"
+			],
+			[
+				"f",
+				"FWIT"
+			],
+			[
+				"FEL",
+				"FIELD_B"
+			],
+			[
+				"Acc_w",
+				"ACC_WHITE"
+			],
+			[
+				"ac",
+				"ACC_BLACK"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"feld",
+				"feldB"
+			],
+			[
+				"get",
+				"getchar"
+			],
+			[
+				"fel",
+				"feldB"
+			],
+			[
+				"s",
+				"system"
+			],
+			[
+				"D",
+				"D"
+			],
+			[
+				"ti",
+				"tiks"
+			],
+			[
+				"time",
+				"time2"
+			],
+			[
+				"tim",
+				"time3"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"fp",
+				"fp_1"
+			],
+			[
+				"ANSI_COLOR_re",
+				"ANSI_COLOR_RED"
+			],
+			[
+				"an",
+				"ANSI_COLOR_RESET"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"mysqli",
+				"mysqli_report"
+			],
+			[
+				"mysql_e",
+				"mysql_error"
+			],
+			[
+				"real_esc",
+				"mysql_real_escape_string"
+			],
+			[
+				"i",
+				"inc	#include \"…\""
+			],
+			[
+				"srt",
+				"strcmp"
+			],
+			[
+				"n",
+				"num_of_oc_w"
+			],
+			[
+				"po",
+				"poz"
+			],
+			[
+				"poz",
+				"poz2"
+			],
+			[
+				"nu",
+				"num_of_oc_w"
+			],
+			[
+				"wor",
+				"word1"
+			],
+			[
+				"fo",
+				"for	For Loop"
+			],
+			[
+				"w",
+				"word"
+			],
+			[
+				"has",
+				"hash1"
+			],
+			[
+				"l",
+				"li"
+			],
+			[
+				"be",
+				"break"
+			],
+			[
+				"ha",
+				"hash1"
+			],
+			[
+				"en",
+				"endd"
+			],
+			[
+				"ma",
+				"main	main()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game.c",
+			"settings":
+			{
+				"buffer_size": 2791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "h1game.h",
+			"settings":
+			{
+				"buffer_size": 871,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hgame.h",
+			"settings":
+			{
+				"buffer_size": 985,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "junk_code.c",
+			"settings":
+			{
+				"buffer_size": 2386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "colurs.h",
+			"settings":
+			{
+				"buffer_size": 3335,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/hgame.h",
+		"/home/georgi/po-homework/V/02/README.md",
+		"/home/georgi/po-homework/V/02/08/task3.c",
+		"/home/georgi/po-homework/V/02/08/task2.c",
+		"/home/georgi/po-homework/V/02/08/task1.c",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/game.c",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/colurs.h",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/h1game.h",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/info.c",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/info.txt",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/debug.txt",
+		"/home/georgi/.bash_aliases",
+		"//ect",
+		"//.cd",
+		"//bach",
+		"/home/georgi/SSH_MULTIPLAYER_GAME-/mul_game/game/game1.c",
+		"/home/georgi/mul_game/game/game.c",
+		"/home/georgi/mul_game/game/hgame.h",
+		"/home/georgi/mul_game/game/colurs.h",
+		"/home/georgi/mul_game/game/game",
+		"/home/georgi/mul_game/acount.c",
+		"/home/georgi/mul_game/test/text.txt",
+		"/home/georgi/mul_game/server.c",
+		"/home/georgi/mul_game/test/acki.c",
+		"/.bash",
+		"/home/georgi/mul_game/all",
+		"/home/georgi/acount.c",
+		"/home/georgi/server.c",
+		"/media/georgi/00B87C26B87C1BFA/New Text Document.txt",
+		"/media/georgi/3CE88A4FE88A06FC/System.txt",
+		"/etc/NetworkManager/NetworkManager.conf",
+		"/etc/rc.local",
+		"/etc/sysctl.conf",
+		"/etc/dnsmasq.conf",
+		"/etc/network/interfaces",
+		"/etc/hostapd/hostapd.conf",
+		"/var/www/html/sc/in.php",
+		"/var/www/html/loginn.php",
+		"/var/www/html/login.php",
+		"/usr/share/doc/hostapd/examples/hostapd.conf.gz",
+		"/var/www/html/index.html",
+		"/etc/apache2/apache2.conf",
+		"/etc/host.conf",
+		"/etc/apache2/conf-available/security.conf",
+		"/etc/apache2/conf-available/other-vhosts-access-log.conf",
+		"/etc/apache2/conf-available/localized-error-pages.conf",
+		"/etc/apache2/conf-available/charset.conf",
+		"/etc/apache2/conf-available/serve-cgi-bin.conf",
+		"/etc/apache2/conf-enabled/security.conf",
+		"/etc/apache2/conf-enabled/serve-cgi-bin.conf",
+		"/etc/apache2/conf-enabled/localized-error-pages.conf",
+		"/etc/apache2/conf-enabled/other-vhosts-access-log.conf",
+		"/etc/apache2/conf-enabled/charset.conf",
+		"/etc/apache2/sites-available/000-default.conf",
+		"/etc/apache2/sites-available/default-ssl.conf",
+		"/etc/apache2/ports.conf",
+		"/home/georgi/Desktop/programs/pr00.c",
+		"/etc/apache2/magic",
+		"/etc/apache2/envvars",
+		"/home/georgi/.bashrc",
+		"/etc/init.d/apache2",
+		"/home/georgi/.bashrc_aliases",
+		"/home/georgi/.bashrc.alias",
+		"/home/georgi/po-homework/V/01/08/zad3.c",
+		"/etc/shadow",
+		"/usr/share/doc/bash-doc/example",
+		"/etc/bash.bashrc",
+		"/home/georgi/po-homework/V/01/README.md",
+		"/home/georgi/po-homework/V/01/08/zad2.c",
+		"/home/georgi/po-homework/V/01/08/zad1.c",
+		"/home/georgi/.config/sublime-text-3/Packages/User/C_.sublime-build",
+		"/home/georgi/po-homework/V/01/08/zad2",
+		"//.bash.aliases",
+		"//bash-alias",
+		"//bash.alias",
+		"//bash-aliases",
+		"//bash",
+		"/home/georgi/.config/sublime-text-3/Packages/User/C++.sublime-settings",
+		"/var/www/html/sc/input.php",
+		"//.bash",
+		"//.batch",
+		"//.bashrc",
+		"/home/.bashrc",
+		"/usr/share/applications/sublime_text.desktop",
+		"/var/lib/apache2/module/enabled_by_maint/alias",
+		"/var/www/testphp.php"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(\"% ",
+			"if",
+			"_open_source",
+			"-D ",
+			"-D",
+			"(\"%\\",
+			"a.",
+			"pl.",
+			"	 ",
+			"04",
+			"01",
+			"initialize",
+			"initial",
+			"));\n",
+			"00",
+			"_cus2[14],",
+			"_cus1[14],",
+			"sul_cus1[14]=",
+			"sul_cus2[14]=",
+			"char sul_cus2[14]",
+			"char sul_cus1[14]",
+			",sul_cus;",
+			"_cus);",
+			"char sul_cus1[12]",
+			"sprintf(sul_cus,\"%s%s\",",
+			"sprintf(sul_cus,\"%s\",",
+			"feld",
+			"();\n",
+			"171",
+			"45",
+			"time",
+			"fp_1",
+			"MAGENTA",
+			"00",
+			"#",
+			"wpa_key_mgmt",
+			"wpa=",
+			"servername",
+			"localho",
+			"localhost",
+			"gccc",
+			">= "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"(*a).",
+			"(*pl).",
+			"4",
+			"1",
+			"initialize_feld",
+			"initialize",
+			"0",
+			"7",
+			"_cus2,",
+			"_cus1,",
+			"strcpy(sul_cus1[14],",
+			"strcpy(sul_cus2[14],",
+			" sul_cus2[14]",
+			" sul_cus1[14]",
+			" ;",
+			"_cus;",
+			"char sul_cus1[14]",
+			"char sul_cus2[14]=",
+			"char sul_cus1[12]=",
+			"FLEN",
+			"FWIT",
+			"stdin",
+			"CYAN",
+			"04"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1607,
+								1607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "h1game.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "hgame.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "junk_code.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								999,
+								999
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 367.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "colurs.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SS_game.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

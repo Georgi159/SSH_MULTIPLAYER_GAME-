@@ -1,3 +1,4 @@
+#define FULL_RESET 	printf("\033[7;0m\033[0m");
 
 
 
