@@ -7,7 +7,7 @@
 
 
 #define SHMSZ     sizeof(char)*40
-
+;
 int  main()
 {
     int shmid;
