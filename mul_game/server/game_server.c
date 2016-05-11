@@ -8,47 +8,15 @@
 int main()
 {	
 	//intalize
-
-		int shmid;
-	    char  *s=NULL;
-	    char *shm;
-
-
-	    /*
-	     * Create the segment.
-	     */
-	     
-	    if ((shmid = shmget(key, SH_M_S, IPC_CREAT | 0666)) < 0) {
-	        perror("shmget");
-	        exit(1);
-	    }
-	    /*
-	     * Now we attach the segment to our data space.
-	     */
-	    if ((shm = shmat(shmid, NULL, 0)) == (char *) -1) {
-	        perror("shmat");
-	        exit(1);
-	    }
-
-	    
-	    printf("%d\n",SH_M_S );
-	    s=shm;
-	    printf("%p %p %p %p %p\n",(void *)s ,(void *)players, (void *)feld,(void *)feldS,(void *)feldB );
-
-	    players=(player *)s;
-
-	  	feld=(char **) (s+sizeof(player)*num_of_players);
-	  	feldS=(int **) ((sizeof(char)*FWIT*FLEN)+feld);
-	  	feldB=(int **) ((sizeof(int)*FWIT*FLEN)+feldS);
-
-	    printf("%p %p %p %p %p\n",(void *)s ,(void *)players, (void *)feld,(void *)feldS,(void *)feldB );
-
+		initialize_file_pointers();
 
 
 
 		a=time(0);
 		initialize_feld(FIELD_S,FIELD_C_S,FIELD_B);
-		memset(players, 0 ,sizeof(player));
+
+		write_to_file_everything();
+		memset(&players[0], 0 ,sizeof(player));
 		for (int i = 0; i < num_of_players; ++i)
 		{
 			initialize_player(&players[i]);
@@ -58,21 +26,20 @@ int main()
 	// main loop
 	while(1)
 	{
-		for (int i = 0; i < num_of_players; ++i)
+		//for (int i = 0; i < num_of_players; ++i)
 		{
-			move_player(players[i].comand,&players[i]);
+			move_player(comand(),&players[0]);
 		}
-		
+				update();
 
 		DONT_GET_OUT();
 		eat_food();
-
 		spawn_food();
 
 		b=time(0);
 		printf("%llu\n%lf FPS\n",tiks, (double)tiks/(double)(b-a) );
 		tiks++;
-		system("sleep 0.009760");
+		system("sleep 0.010960");
 
 	}
 
@@ -93,11 +60,10 @@ int spawn_food()
 	{
 		return 1;
 	}
-
+	//getchar();
+	//getchar();
 	feld[y][x]= FOOD;
-
 	feldS[y][x]= 132;
-
 	feldB[y][x]= 123;
 	num_of_food++;
 	return 0;

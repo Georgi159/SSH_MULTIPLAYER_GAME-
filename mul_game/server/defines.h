@@ -7,10 +7,10 @@
 	#include <unistd.h>
 	#include <fcntl.h>
 	#include "colurs.h"
-	#include <sys/shm.h>
-	#include <sys/types.h>	
-	#include <sys/ipc.h>
-	#include <sys/mman.h>
+	//#include <sys/shm.h>
+	//#include <sys/types.h>	
+	//#include <sys/ipc.h>
+	//#include <sys/mman.h>
 
 //incl
 
@@ -23,6 +23,7 @@
 	#define FOOD '?'
 	#define SPEED_MULTIPLIER 5
 	#define FOOD_MULTIPLIER 60
+	#define NUM_OF_PLAYERS 3
 
 
 	#define SH_M_S (sizeof(player)*num_of_players+(sizeof(int)*FWIT*FLEN)*2+(sizeof(char)*FWIT*FLEN)+3)
@@ -44,17 +45,15 @@
 //def STR
 
 //def VAR
-	int num_of_players=2;
-	player *players;
+	int num_of_players=NUM_OF_PLAYERS;
+	player players[NUM_OF_PLAYERS];
 	int num_of_food=0;
 	unsigned long long tiks=0;
-	char **feld;
-	int **feldB;
-	int **feldS;
+	char feld[FLEN][FWIT];
+	int feldB[FLEN][FWIT];
+	int feldS[FLEN][FWIT];
 	time_t a=0,b=0 ;
-
-
-	key_t key=1234;
+	FILE *fp_players[NUM_OF_PLAYERS], *fp_feld, *fp_feldS, *fp_feldB;
 
 //def VAR
 
@@ -74,5 +73,7 @@
 	int line_len();
 	void print_ch(char ch,int col_s,int col_b);
 	void clear();
+	int write_to_file();
+	int initialize_file_pointers();
 
 // def fun

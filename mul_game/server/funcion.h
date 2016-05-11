@@ -141,3 +141,88 @@ int initialize_feld(char a,int b ,int c)
 	return 0;
 
 }
+int initialize_file_pointers()
+{
+	puts("ssssss");
+
+	//*fp_players, *fp_feld,*fp_feldS,fp_feldB;
+	system("mkdir /tmp/ssh_game");
+	//system("touch /tmp/ssh_game/feld /tmp/ssh_game/feldS /tmp/ssh_game/players /tmp/ssh_game/feldB");
+
+	if(!(fp_feld =fopen("//tmp//ssh_game//feld", "w+r")))
+	{
+		puts("s");
+		exit(10);
+	}
+	
+	if(!(fp_feldS =fopen("//tmp//ssh_game//feldS", "w+r")))
+	{
+		puts("s");
+		exit(10);
+	}
+	
+	if(!(fp_feldB = fopen("//tmp//ssh_game//feldB", "w+r")))
+	{
+		puts("s");
+		exit(10);
+	}
+	for (int i = 0; i < num_of_players; ++i)
+	{
+		char a[200]="//tmp//ssh_game//players";
+		
+		sprintf(a,"%s%d", a,i );
+		
+		if(!(fp_players[i] =fopen(a, "w+b")))
+		{
+			puts("s");
+			exit(10);
+		}
+
+	}
+	return 0;
+}
+
+int write_to_file_everything()
+{
+	for (int i = 0; i < FWIT; ++i)
+	{
+		for (int l = 0; l < FLEN; ++l)
+		{
+			fprintf(fp_feld, "%d ", feld[i][l]);
+			
+		}
+	}
+	for (int i = 0; i < FWIT; ++i)
+	{
+		for (int l = 0; l < FLEN; ++l)
+		{
+			fprintf(fp_feldB, "%d ", feldB[i][l]);
+			
+		}
+	}
+	for (int i = 0; i < FWIT; ++i)
+	{
+		for (int l = 0; l < FLEN; ++l)
+		{
+			fprintf(fp_feldS, "%d ", feldS[i][l]);
+			
+		}
+	}
+
+	for (int i = 0; i < num_of_players; ++i)
+	{
+		//fwrire(&players[i],	sizeof(player) ,1 , fp_players[i]);
+
+		fprintf(fp_players[i], "%c",  );
+	}
+
+	return 0;
+}
+
+int read_from_file_players()
+{
+	
+
+
+	return 0;
+}
